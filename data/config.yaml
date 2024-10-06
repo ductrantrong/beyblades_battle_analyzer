@@ -1,0 +1,8 @@
+path: data/split/images
+train:
+  - train
+val:
+  - val
+
+# Classes
+nc: 1
