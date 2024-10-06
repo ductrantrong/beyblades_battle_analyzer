@@ -1,7 +1,4 @@
-General Instructions
 # Beyblade Battle Analysis Application
-
-
 ## Todo
 - ✅ **Detect Beyblades**: Be able to detect beyblades in a video. The video is top-down view, 1v1 mode.
 - ✅ **Game Over Detection**: Detect when the game is over, that is when one of the beyblades stops spinning, or end of video
@@ -26,7 +23,11 @@ General Instructions
 2. Data extract from the inference video. Those data maybe only fit on 1 video only (assignment purpose)
 3. The accuracy of the beyblade detection model.
 ![alt text](runs/detect/train2/results.png)
-4. Reproduce:
+4. Logic:
+	- Load video, model, tracker
+	- Run inference on each frame, then track base on bounding box
+	- Check if beyblade is spining or not, by using image processing, compare current frame with the previous
+5. Reproduce:
 	- Use `extract_image.py` to gen data from video
 	- Run `train.sh`
 
